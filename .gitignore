@@ -1,0 +1,15 @@
+/0_SEMINARSKI_KLIJENT/build/
+/0_SEMINARSKI_KLIJENT/dist/
+
+/0_SEMINARSKI_SERVER/build/
+/0_SEMINARSKI_SERVER/dist/
+
+/0_SEMINARSKI_ZAJEDNICKI/build/
+/0_SEMINARSKI_ZAJEDNICKI/dist/
+
+/0_SEMINARSKI_KLIJENT/nbproject/private/
+/0_SEMINARSKI_SERVER/nbproject/private/
+/0_SEMINARSKI_ZAJEDNICKI/nbproject/private/
+
+# Java
+*.class

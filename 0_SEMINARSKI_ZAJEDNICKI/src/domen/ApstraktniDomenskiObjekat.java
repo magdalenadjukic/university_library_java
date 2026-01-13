@@ -1,0 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
+package domen;
+
+import java.io.Serializable;
+import java.util.List;
+import java.sql.*;
+/**
+ *
+ * @author DELL
+ */
+public interface ApstraktniDomenskiObjekat extends Serializable {
+    
+    public String vratiNazivTabele();
+    public List<ApstraktniDomenskiObjekat> vratiListu(ResultSet rs) throws Exception;//select
+    public String vratiKoloneZaUbacivanje(); //insert
+    public String vratiVrednostiZaUbacivanje();
+    public String vratiPrimarniKljuc();//update ili delete
+    public ApstraktniDomenskiObjekat vratiObjekatIzRS(ResultSet rs) throws Exception;//vraca 1 obj
+    public String vratiVrednostiZaIzmenu();//update
+    
+}
