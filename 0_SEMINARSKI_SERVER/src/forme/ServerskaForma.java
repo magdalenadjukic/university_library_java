@@ -20,8 +20,9 @@ public class ServerskaForma extends javax.swing.JFrame {
      */
     public ServerskaForma() {
         initComponents();
+        setLocationRelativeTo(null);
         server=new Server();
-        jLabel2status.setText("server nije pokrenut");
+        jLabel2status.setText("Server nije pokrenut.");
         jButton2ZAUSTAVI.setEnabled(false);
     }
 
@@ -61,7 +62,7 @@ public class ServerskaForma extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("status:");
+        jLabel1.setText("STATUS:");
 
         jLabel2status.setText("jLabel2");
 
@@ -138,7 +139,7 @@ public class ServerskaForma extends javax.swing.JFrame {
     private void jButton1POKRENIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1POKRENIActionPerformed
         // TODO add your handling code here:
         server.start();
-        jLabel2status.setText("SERVER POKRENUT");
+        jLabel2status.setText("SERVER POKRENUT!");
         jButton2ZAUSTAVI.setEnabled(true);
         jButton1POKRENI.setEnabled(false);
     }//GEN-LAST:event_jButton1POKRENIActionPerformed
@@ -146,7 +147,7 @@ public class ServerskaForma extends javax.swing.JFrame {
     private void jButton2ZAUSTAVIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ZAUSTAVIActionPerformed
         // TODO add your handling code here:
         server.zaustaviServer();
-        jLabel2status.setText("SERVER ZAUSTAVLJEN");
+        jLabel2status.setText("SERVER ZAUSTAVLJEN.");
         jButton2ZAUSTAVI.setEnabled(false);
         jButton1POKRENI.setEnabled(true);
     }//GEN-LAST:event_jButton2ZAUSTAVIActionPerformed

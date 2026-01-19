@@ -17,7 +17,15 @@ public class PrijaviBibliotekarSO extends ApstraktnaGenerickaOperacija {
     
     @Override
     protected void preduslovi(Object obj) throws Exception {
-        //todo
+        if(obj==null || !(obj instanceof Bibliotekar)){
+            throw new Exception("Корисничко име и шифра нису исправни.");
+            //ispisati poruku kao jop.showmessagedialog?
+        }
+        Bibliotekar bibliotekar=(Bibliotekar) obj; 
+        
+        if(bibliotekar.getKorisnickoIme()==null || bibliotekar.getKorisnickoIme().isEmpty() || bibliotekar.getLozinka()==null || bibliotekar.getLozinka().isEmpty()){
+            throw new Exception("Корисничко име и шифра нису исправни.");
+        }
     }
 
     @Override

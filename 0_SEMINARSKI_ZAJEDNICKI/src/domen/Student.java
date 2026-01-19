@@ -5,6 +5,7 @@
 package domen;
 
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -105,12 +106,25 @@ public class Student implements ApstraktniDomenskiObjekat{
 
     @Override
     public String vratiNazivTabele() {
-        return "student";
+        return "student ";
     }
 
     @Override
     public List<ApstraktniDomenskiObjekat> vratiListu(ResultSet rs) throws Exception {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        List<ApstraktniDomenskiObjekat> lista=new ArrayList<>();
+        while(rs.next()){
+            Student s=new Student();
+            s.setIdStudent(rs.getInt("student.idStudent"));
+            s.setIme(rs.getString("student.ime"));
+            s.setPrezime(rs.getString("student.prezime"));
+            s.setEmail(rs.getString("student.email"));
+            NivoStudija ns=new NivoStudija();
+            ns.setIdNivoStudija(rs.getInt("n.idNivoStudija"));
+            ns.setNazivNivoa(rs.getString("n.nazivNivoa"));
+            s.setNivoStudija(ns);
+            lista.add(s);
+        }
+        return lista;
     }
 
     @Override

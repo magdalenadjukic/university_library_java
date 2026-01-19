@@ -18,6 +18,7 @@ public class KonfBazeForma extends javax.swing.JDialog {
     public KonfBazeForma(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+        setLocationRelativeTo(null);
         jTextField1url.setText(konfiguracija.Konfiguracija.getInstance().getProperty("url"));
         jTextField1username.setText(konfiguracija.Konfiguracija.getInstance().getProperty("username"));
         jPasswordField1.setText(konfiguracija.Konfiguracija.getInstance().getProperty("password"));

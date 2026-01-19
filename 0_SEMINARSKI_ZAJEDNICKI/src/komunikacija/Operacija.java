@@ -11,5 +11,5 @@ import java.io.Serializable;
  * @author DELL
  */
 public enum Operacija implements Serializable {
-    LOGIN;
+    PRIJAVA,UCITAJ_STUDENTE,OBRISI_STUDENT, UCITAJ_NIVOE;
 }

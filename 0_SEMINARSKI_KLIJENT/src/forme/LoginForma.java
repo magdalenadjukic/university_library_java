@@ -20,6 +20,7 @@ public class LoginForma extends javax.swing.JFrame {
      */
     public LoginForma() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -38,13 +39,13 @@ public class LoginForma extends javax.swing.JFrame {
         jButton1login = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("LOGIN");
+        setTitle("PRIJAVLJIVANJE");
 
-        jLabel1.setText("korisnicko ime");
+        jLabel1.setText("Korisničko ime");
 
-        jLabel2.setText("lozinka");
+        jLabel2.setText("Šifra");
 
-        jButton1login.setText("uloguj se");
+        jButton1login.setText("PRIJAVI SE");
         jButton1login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1loginActionPerformed(evt);
@@ -67,7 +68,7 @@ public class LoginForma extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField1korIme)
                             .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 179, Short.MAX_VALUE))))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

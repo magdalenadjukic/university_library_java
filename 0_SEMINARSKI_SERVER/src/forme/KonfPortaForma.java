@@ -17,6 +17,7 @@ public class KonfPortaForma extends javax.swing.JDialog {
      */
     public KonfPortaForma(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+        setLocationRelativeTo(null);
         initComponents();
     }
 

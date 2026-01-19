@@ -24,6 +24,7 @@ public class GlavnaFormaKontroler {
 
     public void otvoriFormu() {
         gf.setVisible(true);
+        
     }
     
 }

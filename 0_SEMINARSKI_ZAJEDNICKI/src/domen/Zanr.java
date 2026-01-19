@@ -9,5 +9,5 @@ package domen;
  * @author DELL
  */
 public enum Zanr {
-    LJUBAVNI,KRIMINALISTICKI,NAUCNA_FANTASTIKA,MEMOAR;
+    ROMAN,PROGRAMIRANJE,POEZIJA,NOVELA;
 }

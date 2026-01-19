@@ -46,12 +46,13 @@ public class LoginKontroler {
                 Bibliotekar b= komunikacija.Komunikacija.getInstance().prijava(korisnickoIme,lozinka);
                 koordinator.Koordinator.getInstance().setUlogovaniBibl(b);
                 if(b==null){
-                    JOptionPane.showMessageDialog(lf, "Prijava na sistem nije uspesna.", "GRESKA", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(lf, "Корисничко име и шифра нису исправни.", "Грешка!", JOptionPane.ERROR_MESSAGE);
                 }
                 else{
                     //nova forma se otvara
-                    JOptionPane.showMessageDialog(lf, "Prijava na sistem uspesna!", "USPEH", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(lf, "Корисничко име и шифра су исправни.", "Успешно!", JOptionPane.INFORMATION_MESSAGE);
                     koordinator.Koordinator.getInstance().otvoriGlavnuFormu();
+                    //poruka ukoliko ne moze da se otvori glavna forma!!! TODO
                     lf.dispose();
                 }
                 
