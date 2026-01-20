@@ -1,4 +1,3 @@
-**PROJECT IN PROGRESS**
 
 This is a Java client-server application for tracking the work of a university library.
 The server connects to a MySQL database (managed via SQLyog) and handles library operations, while the client provides a GUI for librarians.
