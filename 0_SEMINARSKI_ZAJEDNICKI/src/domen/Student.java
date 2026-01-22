@@ -14,7 +14,7 @@ import java.util.Objects;
  * @author DELL
  */
 public class Student implements ApstraktniDomenskiObjekat{
-    //Student (idStudent, ime, prezime, email, idNivoStudija) +indeks?
+    //Student (idStudent, ime, prezime, email, idNivoStudija) 
     private int idStudent;
     private String ime;
     private String prezime;

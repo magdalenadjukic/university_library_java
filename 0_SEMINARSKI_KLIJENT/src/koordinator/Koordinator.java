@@ -6,9 +6,11 @@ package koordinator;
 
 import domen.Bibliotekar;
 import forme.GlavnaForma;
+import forme.KreirajStudentForma;
 import forme.LoginForma;
 import forme.PrikazStudenataForma;
 import kontroleri.GlavnaFormaKontroler;
+import kontroleri.KreirajStudentKontroler;
 import kontroleri.LoginKontroler;
 import kontroleri.PrikazStudenataKontroler;
 
@@ -23,6 +25,7 @@ public class Koordinator {
     private GlavnaFormaKontroler glavnaFormaKontroler;
     private Bibliotekar ulogovaniBibl;
     private PrikazStudenataKontroler psk;
+    private KreirajStudentKontroler ksk;
     
     private Koordinator() {
     }
@@ -55,5 +58,8 @@ public class Koordinator {
         psk=new PrikazStudenataKontroler(new PrikazStudenataForma());
         psk.otvoriFormu();
     }
-    
+    public void otvoriKreirajStudentFormu(){
+        ksk=new KreirajStudentKontroler(new KreirajStudentForma());
+        ksk.otvoriFormu();
+    }
 }

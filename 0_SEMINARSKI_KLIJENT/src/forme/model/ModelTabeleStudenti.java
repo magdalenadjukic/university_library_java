@@ -4,9 +4,11 @@
  */
 package forme.model;
 
+import domen.NivoStudija;
 import domen.Student;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import javax.swing.table.AbstractTableModel;
 
 /**
@@ -58,6 +60,16 @@ public class ModelTabeleStudenti extends AbstractTableModel {
     @Override
     public String getColumnName(int column) {
         return kolone[column];
+    }
+
+    public void pretraziStudent(String ime, String prezime, NivoStudija nivoStudija) {
+         List<Student> filteredList = lista.stream()
+                .filter(s -> (ime == null || ime.isEmpty() || s.getIme().toLowerCase().contains(ime.toLowerCase())))
+                .filter(s -> (prezime == null || prezime.isEmpty() || s.getPrezime().toLowerCase().contains(prezime.toLowerCase())))
+                .filter(s -> (nivoStudija == null || s.getNivoStudija().getIdNivoStudija() == nivoStudija.getIdNivoStudija()))
+                .collect(Collectors.toList());
+        this.lista = filteredList;
+        fireTableDataChanged();
     }
     
 }

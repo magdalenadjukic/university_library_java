@@ -18,6 +18,11 @@ public class Odgovor implements Serializable {//moj
     public Odgovor() {
     }
 
+    public Odgovor(Object odgovor, Exception exc) {
+        this.odgovor = odgovor;
+        this.exc = exc;
+    }
+
     public Odgovor(Object odgovor) {
         this.odgovor = odgovor;
     }

@@ -51,6 +51,7 @@ public class PrikazStudenataKontroler {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int red=psf.getjTable1studenti().getSelectedRow();
+                
                 if(red==-1){
                     JOptionPane.showMessageDialog(psf, "Систем не може да обрише студента", "ГРЕШКА", JOptionPane.ERROR_MESSAGE);
                     
@@ -64,6 +65,7 @@ public class PrikazStudenataKontroler {
                         pripremiFormu();
                     } catch (Exception ex) {
                         JOptionPane.showMessageDialog(psf, "Систем не може да обрише студента");
+                        
                     }
                     
                 }
@@ -76,10 +78,24 @@ public class PrikazStudenataKontroler {
                 String ime=psf.getjTextField1imeStudenta().getText().trim();
                 String prezime=psf.getjTextField1prezimeStudenta().getText().trim();
                 NivoStudija nivoStudija=(NivoStudija) psf.getjComboBox1NivoSt().getSelectedItem();
-                //preko modela tabele uraditi
                 
+                ModelTabeleStudenti mts=(ModelTabeleStudenti) psf.getjTable1studenti().getModel();
+                mts.pretraziStudent(ime,prezime,nivoStudija);
+                
+                if(mts.getLista().isEmpty()){
+                    JOptionPane.showMessageDialog(psf, "Систем не може да нађе студенте по задатим критеријумима", "X", JOptionPane.ERROR_MESSAGE);
+                    
+                }
+                else
+                    JOptionPane.showMessageDialog(psf, "Систем је нашао студенте по задатим критеријумима", "Uspeh", JOptionPane.INFORMATION_MESSAGE);
             }
-        });        
+        }); 
+        psf.addBtnResetTableActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                pripremiFormu();
+            }
+        });
         
     }
     

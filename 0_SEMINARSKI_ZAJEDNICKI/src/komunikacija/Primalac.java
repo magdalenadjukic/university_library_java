@@ -15,23 +15,7 @@ import java.util.logging.Logger;
  * @author DELL
  */
 public class Primalac {
-//    private Socket socket;
-//
-//    public Primalac(Socket socket) {
-//        this.socket = socket;
-//    }
-//    
-//    public Object primi(){
-//        try {
-//            ObjectInputStream in=new ObjectInputStream(socket.getInputStream());
-//            return in.readObject();
-//        } catch (Exception ex) {
-//            ex.printStackTrace();
-//            //Logger.getLogger(Primalac.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        return null;
-//    }
-    
+
     
     private ObjectInputStream ois;
 

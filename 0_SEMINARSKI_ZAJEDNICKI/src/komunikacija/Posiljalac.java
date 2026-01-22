@@ -15,21 +15,7 @@ import java.util.logging.Logger;
  * @author DELL
  */
 public class Posiljalac {
-//    private Socket socket;
-//
-//    public Posiljalac(Socket socket) {
-//        this.socket = socket;
-//    }
-//    public void posalji(Object obj){
-//        try {
-//            ObjectOutputStream out=new ObjectOutputStream(socket.getOutputStream());
-//            out.writeObject(obj);
-//            out.flush();
-//        } catch (IOException ex) {
-//            ex.printStackTrace();
-//            //Logger.getLogger(Posiljalac.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
+
     private ObjectOutputStream oos;
 
     public Posiljalac(Socket s) {

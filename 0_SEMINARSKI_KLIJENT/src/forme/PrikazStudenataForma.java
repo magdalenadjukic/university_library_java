@@ -43,6 +43,7 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jComboBox1NivoSt = new javax.swing.JComboBox();
         jButton1PRETRAZI = new javax.swing.JButton();
+        jButtonRESETTABELA = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,6 +75,18 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
         });
 
         jButton1PRETRAZI.setText("PRETRAŽI");
+        jButton1PRETRAZI.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1PRETRAZIActionPerformed(evt);
+            }
+        });
+
+        jButtonRESETTABELA.setText("RESETUJ TABELU");
+        jButtonRESETTABELA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRESETTABELAActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,11 +94,7 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1obrisiStudenta, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -97,9 +106,14 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox1NivoSt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1PRETRAZI, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jComboBox1NivoSt, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButtonRESETTABELA, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton1PRETRAZI, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                    .addComponent(jButton1obrisiStudenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -116,9 +130,11 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
                     .addComponent(jButton1PRETRAZI))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1obrisiStudenta))
-                .addContainerGap(26, Short.MAX_VALUE))
+                    .addComponent(jButton1obrisiStudenta)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonRESETTABELA)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -128,8 +144,24 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1NivoStActionPerformed
 
+    private void jButtonRESETTABELAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRESETTABELAActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonRESETTABELAActionPerformed
+
+    private void jButton1PRETRAZIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1PRETRAZIActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1PRETRAZIActionPerformed
+
     public JComboBox getjComboBox1NivoSt() {
         return jComboBox1NivoSt;
+    }
+
+    public JButton getjButtonRESETTABELA() {
+        return jButtonRESETTABELA;
+    }
+
+    public void setjButtonRESETTABELA(JButton jButtonRESETTABELA) {
+        this.jButtonRESETTABELA = jButtonRESETTABELA;
     }
 
     public JTextField getjTextField1imeStudenta() {
@@ -228,6 +260,7 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1PRETRAZI;
     private javax.swing.JButton jButton1obrisiStudenta;
+    private javax.swing.JButton jButtonRESETTABELA;
     private javax.swing.JComboBox jComboBox1NivoSt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -244,5 +277,8 @@ public class PrikazStudenataForma extends javax.swing.JFrame {
     }
     public void addBtnPretraziActionListener(ActionListener actionListener) {
          jButton1PRETRAZI.addActionListener(actionListener);
+    }
+    public void addBtnResetTableActionListener(ActionListener actionListener) {
+         jButtonRESETTABELA.addActionListener(actionListener);
     }
 }
